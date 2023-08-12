@@ -1,0 +1,88 @@
+@import "color.scss";
+
+.repair-types {
+  margin-top: 24px;
+  background-color: $bg_page;
+
+
+  &__title {
+    padding: 16px;
+    font-family: 'TT Lakes';
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    color: $color_text_gr;
+    font-weight: 500;
+    background: linear-gradient(to right, $bg_page 0%, $bg_elem 100%);
+  }
+
+  &__swiper {
+    overflow: hidden;
+    max-width: 2800px;
+    margin: 0 auto;
+    background-color: $bg_page;
+    position: relative;
+    transition: 1s;
+
+    max-height: 210px;
+    @media screen and (min-width: 768px){
+      max-height: 200px;
+    }
+  }
+
+
+  &__swiper-wrapper {
+    display: flex;
+    padding-top: 16px;
+    padding-left: 16px;
+    @media screen and (min-width: 768px) {
+      flex-wrap: wrap;
+      padding-top: 24px;
+      padding-left: 24px;
+    }
+    @media screen and (min-width: 1120px) {
+      flex-wrap: wrap;
+      padding-left: 32px;
+    }
+  }
+
+  &__swiper-slide {
+    background-color: $bg_elem;
+    border: 1px solid $framing;
+    border-radius: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    flex-shrink: 0;
+    padding: 16px 16px;
+    min-height: 160px;
+    width: 224px;
+    @media screen and (min-width: 768px) {
+      min-width: 224px;
+      margin-right: 24px;
+      margin-bottom: 16px;
+    }
+    @media screen and (min-width: 1120px) {
+      margin-right: 32px;
+      margin-bottom: 16px;
+      width: 240px;
+    }
+  }
+
+  &__swiper-btn {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    width: 40px;
+    height: 40px;
+    background-image: url("../img/arrow.svg");
+    &:hover{
+      transition-duration: 200ms;
+      opacity: 0.8;
+      transform: scale(0.95);
+    }
+  }
+}

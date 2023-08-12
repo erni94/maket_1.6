@@ -1,0 +1,138 @@
+@import "color.scss";
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 88px;
+  background-color: $bg_elem;
+
+
+  &__link {
+    display: inline-block;
+    vertical-align: middle;
+    height: 40px;
+  }
+
+
+  &__logo {
+    margin-left: 16px;
+    height: 52px;
+  }
+
+  &__repair-icon {
+    margin-right: 16px;
+  }
+
+  &__check-status-icon {
+  margin-right: 16px;
+
+  }
+
+  &__divider-right {
+    background-color: $framing;
+    border-radius: 1px;
+    height: 32px;
+    margin-right: 20px;
+    margin-top: 0;
+    width: 2px;
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+    &__sidebar-icon {
+      @media screen and (min-width: 320px) and (max-width: 767px) {
+         margin-left: 16px;
+       }
+      @media screen and (min-width: 768px) and (max-width: 1119px) {
+        margin-left: 24px;
+      }
+    }
+
+  &__divider-left {
+    @media screen and (min-width: 768px) and (max-width: 1119px) {
+      background-color: $framing;
+      border-radius: 1px;
+      height: 32px;
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-top: 0;
+      width: 2px;
+    }
+  }
+
+
+  &__call-icon {
+    @media screen and (min-width: 768px) and (max-width: 1119px) {
+      margin-left: auto;
+      margin-right: 16px;
+    }
+  }
+
+  &__chat-icon {
+    @media screen and (min-width: 768px) and (max-width: 1119px) {
+      margin-right: 16px;
+    }
+  }
+
+  &__profile-icon {
+    @media screen and (min-width: 768px) and (max-width: 1119px) {
+      margin-right: 20px;
+    }
+  }
+  @media screen and (min-width: 1120px) {
+    display: none;
+  }
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+
+  &__text {
+    margin-left: 24px;
+    font-family: TT Lakes;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; /* 142.857% */
+    letter-spacing: -0.6px;
+  }
+  @media screen and (min-width: 1120px) {
+    &_icons {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      margin-right: 32px;
+      gap: 32px;
+
+      img:hover{
+        transition-duration: 200ms;
+        opacity: 0.8;
+        transform: scale(0.95);
+      }
+    }
+
+    &__repair, &__check-status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    &__check-status-label, &__repair-label {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+    }
+    &__repair-icon, &__check-status-icon {
+      height: 40px;
+    }
+  }
+}
+
+
+
+
